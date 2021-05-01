@@ -61,6 +61,7 @@ public class UserImplementation implements UserService {
         user.setPhone(usersDto.getPhone());
 
         user = usersRepository.save(user);
+        user = usersRepository.getOne(usersDto.getUsername());
         return  modelMapper.map(user, UsersDto.class);
     }
 }

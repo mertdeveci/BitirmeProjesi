@@ -23,8 +23,4 @@ public class Platform implements Serializable {
     private String platform_name;
 
 
-    @OneToOne
-    private Broadcast broadcast;
-
-
 }

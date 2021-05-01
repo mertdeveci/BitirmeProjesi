@@ -4,8 +4,6 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @Data
@@ -18,9 +16,18 @@ public class Publisher implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(length = 100, unique = true)
+    private String publisher_username;
 
     @Column(length = 100)
-    private String publisher_name;
+    private String mail;
 
+    @Column(length = 100)
+    private String phone;
 
+    @Column(length = 100)
+    private String webAdres;
+
+    @Column(length = 100)
+    private String logo;
 }

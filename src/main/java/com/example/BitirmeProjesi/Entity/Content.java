@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -20,10 +21,19 @@ public class Content implements Serializable {
     private Long id;
 
     @Column(length = 200)
+    private String title;
+
+    @Column
+    private Date date;
+
+    @Column(length = 200)
     private String details;
 
     @Column(length = 1000)
     private String link;
+
+    @Column(length = 100)
+    private String groupNo;
 
 
 
